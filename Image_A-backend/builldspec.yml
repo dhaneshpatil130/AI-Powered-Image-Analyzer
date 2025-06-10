@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - cd Image_A-backend
+      - npm install
+artifacts:
+  files:
+    - '**/*'
+  base-directory: Image_A-backend
