@@ -1,11 +1,10 @@
-version: 0.2
-
-phases:
-  install:
-    commands:
-      - cd Image_A-backend
-      - npm install
-artifacts:
-  files:
-    - '**/*'
-  base-directory: Image_A-backend
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/image_A-backend
+hooks:
+  AfterInstall:
+    - location: scripts/install.sh
+  ApplicationStart:
+    - location: scripts/start.sh
